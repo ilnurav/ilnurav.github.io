@@ -17,8 +17,3 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 * Buy the [PRO version](https://hydejack.com/download/) to get the project and resume layout, newsletter subscription box, custom forms, and more.
 
 [^1]: Requires Bundler. Install with `gem install bundler`.
-
-[download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
-=======
-### ilnurav.github.io
->>>>>>> ccbd6c3db42c19b826cdd344203b04a59c446967
