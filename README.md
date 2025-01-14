@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hydejack Starter Kit
 
 A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
@@ -18,3 +19,6 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 [^1]: Requires Bundler. Install with `gem install bundler`.
 
 [download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
+=======
+### ilnurav.github.io
+>>>>>>> ccbd6c3db42c19b826cdd344203b04a59c446967
