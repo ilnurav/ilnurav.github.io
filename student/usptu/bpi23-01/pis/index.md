@@ -1,6 +1,7 @@
 # 💻 Проектирование информационных систем (БПИ-23-01)
 
 **Преподаватель:** Ахметов Ильнур Вазирович  
+📧 **Email:** [ilnurakhmetov@gmail.com](mailto:ilnurakhmetov@gmail.com)  
 ✈️ **Telegram:** [@ilnurav](https://t.me/ilnurav)  
 
 ---
