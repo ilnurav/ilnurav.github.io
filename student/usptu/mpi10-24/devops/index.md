@@ -1,8 +1,8 @@
 # ⚙️ Технологии DevOps: автоматизация внедрений и обновлений (МПИ10-24)
 
 **Преподаватель:** Ахметов Ильнур Вазирович  
+📧 **Email:** [ilnurakhmetov@gmail.com](mailto:ilnurakhmetov@gmail.com)  
 ✈️ **Telegram:** [@ilnurav](https://t.me/ilnurav)  
-📅 *26 февраля 2026 г.*
 
 ---
 
@@ -83,4 +83,4 @@
 | **Работа 4** | `18.03.26` | 📄 [Открыть задание №4](https://drive.google.com/file/d/1x3m03ZhOKGIXidbJNut0tLVLSm4m6QzF/view?usp=sharing) |
 | **Работа 5** | `19.03.26` | 📄 [Открыть задание №5](https://drive.google.com/file/d/1yZuAKUdoDsQy-HjCNQ2sLf0mcXgD1XIX/view?usp=sharing) |
 | **Работа 6** | `25.03.26` | 📄 [Открыть задание №6](https://drive.google.com/file/d/1bFR1aOShjHATLCVbR5xCIthGGgDvpB1Q/view?usp=sharing) |
-| **Работа 7** | `01.04.26` | 📄 [Открыть задание №7]() |
+| **Работа 7** | `01.04.26` | 📄 [Открыть задание №7](https://ilnurav.github.io/student/usptu/mpi10-24/devops/task7/) |
