@@ -8,14 +8,14 @@
 
 ## 🔗 Основные ссылки
 
-- 📤 **[Форма для сдачи работ](https://forms.gle/w9wiz3khniY17zvx7)**
-- 📊 **Таблица учета работ:** *(появится позже)*
+* 📤 **[Форма для сдачи работ](https://forms.gle/w9wiz3khniY17zvx7)**
+* 📊 **Таблица учета работ:** *(появится позже)*
 
 ---
 
 ## 🎥 Лекции и материалы
 
-* **Лекция 1. Библиотека requests. Обращение к модели по API | Amvera**
+* **Лекция 1. Библиотека requests. Обращение к модели по API \| Amvera**
   * ▶️ [Смотреть видео](https://youtu.be/xyanVBSn6aU)
   * 📓 [Ноутбук с лекции (Google Colab)](https://colab.research.google.com/drive/1Xkg5FgOw1b96KDzey5hTVyu-DPDS2Ikd?usp=sharing)
 * **Лекция 2. Базы данных (Часть 1)**
