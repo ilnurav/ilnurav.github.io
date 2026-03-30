@@ -54,3 +54,4 @@
 | **Работа №6** | `20.03.26` | 📄 [Открыть задание (Google Colab)](https://colab.research.google.com/drive/1nkYIEOpB6luwjO72xrf7WvVMk0TjXhqm?usp=sharing) |
 | **Работа №7** | `27.03.26` | 📄 [Открыть задание (Google Colab)](https://colab.research.google.com/drive/1jLG9o6niJs6gP9G-oAeTAvfpkOFtgsGl?usp=sharing) |
 | **Работа №8** | `03.04.26` | 📄 [Открыть задание (Google Colab)](https://colab.research.google.com/drive/1DT9M-dVGYQcOq5Wb3jCepJADjZu2EjE3?usp=sharing) |
+| **Работа №9** | `06.04.26` | 📄 [Открыть задание (Google Colab)](https://colab.research.google.com/drive/1q2qkJmJOGxYlj_0BrJtlbeFonuSeQLX3?usp=sharing) |
