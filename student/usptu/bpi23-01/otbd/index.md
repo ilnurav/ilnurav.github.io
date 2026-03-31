@@ -18,3 +18,4 @@
 | :---: | :--- | :--- | :--- |
 | **Работа 1** | `18.03.26` | Вся группа | 📄 [Открыть задание](https://colab.research.google.com/drive/1q4ouciBY799o73GoOyEI8chtTBBb_DJs?usp=sharing) |
 | **Работа 2** | `25.03.26` | Вся группа | 📄 [Открыть задание](https://docs.google.com/document/d/1ma2eQBBL8LsWZLSyvBHOF01spGqH5NH6/edit?usp=sharing&ouid=109965344791159460638&rtpof=true&sd=true) |
+| **Работа 3** | `01.04.26` | Вся группа | 📄 [Открыть задание](https://docs.google.com/document/d/1sC9roI_wykaH2ME_ia0diP-Jm36Kx_GL419cuPQkBqM/edit?usp=sharing) |
