@@ -8,7 +8,7 @@
 
 ## 🔗 Основные ссылки
 
-- 📤 **[Форма для сдачи работ](https://forms.gle/2N2XXgC5FhbFWYut9)**
+- 📤 **[Форма для сдачи работ](https://forms.gle/hktyh3gGscLK4bqS6)**
 
 ---
 
