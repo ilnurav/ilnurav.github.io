@@ -33,3 +33,4 @@
 * 📝 **[Работа №3](https://docs.google.com/document/d/1BfOXF266hvGj-1VA9FWyy378IJV5oeEiTVv5W1ogc0w/edit?usp=sharing)** *(от 16.03.26)*
 * 📝 **[Работа №4](https://docs.google.com/document/d/1Cb_VrNFQ5RDEkvydYPiJFmf7PkqQ6rY79VOqqI88h3E/edit?usp=sharing)** *(от 23.03.26)*
 * 📝 **[Работа №5](https://docs.google.com/document/d/1HClJaYNwMfRCwj76GUO6WKN9FmtPSozM4d9ovPyrDCI/edit?usp=sharing)** *(от 30.03.26)*
+* 📝 **[Работа №6](https://disk.yandex.ru/d/stigiPifuunqMQ)** *(от 06.04.26)*
