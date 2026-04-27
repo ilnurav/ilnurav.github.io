@@ -36,3 +36,4 @@
 * 📝 **[Работа №6](https://disk.yandex.ru/d/stigiPifuunqMQ)** *(от 06.04.26)*
 * 📝 **[Работа №7](https://disk.yandex.ru/i/Wd8WPH3r3Uvgbw)** *(от 13.04.26)*
 * 📝 **[Работа №8](https://disk.yandex.ru/i/P74b2xRIfQg14g)** *(от 20.04.26)*
+* 📝 **[Работа №9](https://disk.yandex.ru/i/uJksmKjdJl0_JA)** *(от 27.04.26)*
