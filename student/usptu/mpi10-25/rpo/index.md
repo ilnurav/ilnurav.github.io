@@ -9,7 +9,7 @@
 ## 🔗 Основные ссылки
 
 * 📤 **[Форма для сдачи работ](https://forms.gle/w9wiz3khniY17zvx7)**
-* 📊 **Таблица учета работ:** *(появится позже)*
+* 📊 **[Таблица учета работ](https://docs.google.com/spreadsheets/d/1duUkQTSMZ6baXeRLbcpHNARV4sI4pvPqX-dQ02k8VGk/edit?usp=sharing)**
 
 ---
 
