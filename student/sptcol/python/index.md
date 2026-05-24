@@ -41,3 +41,4 @@
 * 📝 **[Работа №12](https://disk.yandex.ru/i/UkP7xsI7ac9Eag)** *(от 30.04.26)*
 * 📝 **[Работа №13](https://disk.yandex.ru/i/OQf9xzWvx2VkbA)** *(от 07.05.26)*
 * 📝 **[Работа №14](https://disk.yandex.ru/i/t1HXpnN1LMw97g)** *(от 14.05.26)*
+* 📝 **[Работа №15](https://disk.yandex.ru/i/EEkRjaBFwezdNA)** *(от 21.05.26)*
