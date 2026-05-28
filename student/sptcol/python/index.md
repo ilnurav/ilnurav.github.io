@@ -42,3 +42,4 @@
 * 📝 **[Работа №13](https://disk.yandex.ru/i/OQf9xzWvx2VkbA)** *(от 07.05.26)*
 * 📝 **[Работа №14](https://disk.yandex.ru/i/t1HXpnN1LMw97g)** *(от 14.05.26)*
 * 📝 **[Работа №15](https://disk.yandex.ru/i/EEkRjaBFwezdNA)** *(от 21.05.26)*
+* 📝 **[Итоговая работа](https://disk.yandex.ru/i/6O0NwMm304Jm_g)** *(дедлайн крайнее занятие 11.06.2026)*
