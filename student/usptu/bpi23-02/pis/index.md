@@ -15,6 +15,7 @@
 ## 🔗 Основные ссылки
 
 - 📤 **[Форма для сдачи работ](https://forms.gle/9RiG1Wq2GXsBG7mW6)**
+- 📤 **[Таблица с итогами](https://docs.google.com/spreadsheets/d/1krRXmMmTTUM3mXkMpDEZR_3CcSgAZyfXdilwAnXO0a8/edit?usp=sharing)**
 
 ---
 
