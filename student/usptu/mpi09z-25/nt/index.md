@@ -17,31 +17,26 @@
 
 ## 🎥 Лекции и материалы
 
+* 📁 **[Все видеолекции (Yandex Disk)](https://disk.yandex.ru/d/ckYLXyyvNRMabw)**
+
 * **Лекция 1**
-  * 🎥 [Видеолекция](https://virtualklass.ru/playback/presentation/2.3/9e9031754dd5d1429777bc7cfe4ad56bbde5322c-1673428272126)
-  * 📓 [Ноутбук с лекции](https://colab.research.google.com/drive/1FPO9Ggy_BYfgmbaOQUSY_1Nx4yzJ4ksK?usp=sharing)
+  * 📓 [Ноутбук с лекции](https://colab.research.google.com/drive/10suX04BDMJluSW3PB8So7rK0N5B3uDDL?usp=sharing)
 * **Лекция 2**
-  * 🎥 [Видеолекция](https://virtualklass.ru/playback/presentation/2.3/9e9031754dd5d1429777bc7cfe4ad56bbde5322c-1675261814057)
-  * 📓 [Ноутбук с лекции](https://colab.research.google.com/drive/1zGDYlOvQ1LXV0ArU2HjdUr9n_Xlb-fnr?usp=sharing)
+  * 📓 [Ноутбук 1](https://colab.research.google.com/drive/1SfJ4csCNqln7IgMl-Y9he9UYAOCTBfYD?usp=sharing)
+  * 📓 [Ноутбук 2](https://colab.research.google.com/drive/1SfpbC2Y7oHXScwyCOTNzEvpUPZGWjNmL?usp=sharing)
+  * 📓 [Ноутбук 3](https://colab.research.google.com/drive/1T3xBTLrt3YNfftirklneqPBDH8rO49Sv?usp=sharing)
+  * 📓 [Ноутбук 4](https://colab.research.google.com/drive/1kVyoouAmDByLZRF78msVMg-zsurATkGn?usp=sharing)
+  * 🚀 [Пример Streamlit-приложения через ngrok](https://colab.research.google.com/drive/1dzlEKG5n6yeaWII6Umho7A_MnMIPS1UE?usp=sharing)
 * **Лекция 3**
-  * 🎥 [Видеолекция](https://cloud.mail.ru/public/sksh/coRXxKGVJ)
   * 📓 [Ноутбук 1](https://colab.research.google.com/drive/13tWLpAk_VjXeicbZ0aMLuydqf9ClJPYF?usp=sharing)
   * 📓 [Ноутбук 2](https://colab.research.google.com/drive/1idx0fNU8p7_shka1vI0FEF9bKFozNSLj?usp=sharing)
 * **Лекция 4**
-  * 🎥 [Видеолекция](https://cloud.mail.ru/public/NGyo/zAHUuqpwB)
   * 📓 [Ноутбук 1](https://colab.research.google.com/drive/1hZyoN6jr_vU0l6cEqc5_4lGOWs8pe4E0?usp=sharing)
   * 📓 [Ноутбук 2](https://colab.research.google.com/drive/1AoLgbmkcQyaG8QUPJFoEckoZUgdzJO6z?usp=sharing)
   * 📓 [Ноутбук 3](https://colab.research.google.com/drive/1E3-YP9d-NBYBBChJOQVt63sYgkeH2Lxi?usp=sharing)
 * **Лекция 5**
-  * 🎥 [Видеолекция](https://cloud.mail.ru/public/AJvp/4k5Q5JBnZ)
   * 📓 [Ноутбук 1](https://colab.research.google.com/drive/1w2kw1HDAwShI7b1VSZd7xmk0DMQJXHhJ?usp=sharing)
   * 📓 [Ноутбук 2](https://colab.research.google.com/drive/1jcka_-UNzmtlpErJASbAe_Vd2sL9mwwi?usp=sharing)
-* **Лекция 6**
-  * 🎥 [Видеолекция](https://cloud.mail.ru/public/7PdQ/WNPuocbUX)
-  * 📓 [Ноутбук с лекции](https://colab.research.google.com/drive/1Y7FV4mFEjZpCJhZRM7s0sW8uCmKKQ9Hy?usp=sharing)
-* **Лекция 7**
-  * 🎥 [Видеолекция](https://youtu.be/xyanVBSn6aU)
-  * 📓 [Ноутбук с лекции](https://colab.research.google.com/drive/1Xkg5FgOw1b96KDzey5hTVyu-DPDS2Ikd?usp=sharing)
 
 ---
 
