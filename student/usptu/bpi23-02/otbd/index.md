@@ -9,6 +9,7 @@
 ## 🔗 Основные ссылки
 
 - 📤 **[Форма для сдачи работ](https://forms.gle/hktyh3gGscLK4bqS6)**
+- 📤 **[Таблица с итогами](https://docs.google.com/spreadsheets/d/1fs-oBBNY0wIQYZYda9R4lhsGXfRI_ivf3FaNw8Rio3w/edit?usp=sharing)**
 
 ---
 
