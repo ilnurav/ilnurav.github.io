@@ -34,8 +34,8 @@
 
 | № | Дедлайн | Ссылки на задания |
 | :---: | :--- | :--- |
-| **Лабораторная №1** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/17oNfADx9kxkyYt_XqbImdvB2H0SMKdbo?usp=sharing#scrollTo=-ZUh6sh2l0Rj) |
-| **Лабораторная №2** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1RblwdOdCFJD3GDIfBngquNyDfqePg-AW?usp=sharing) |
-| **Лабораторная №3** | `до 28.06.26 23:59` | 📄 [Скачать файл задания](https://drive.google.com/file/d/189PsjVcproXNsKoXwFpVSFuNPB6wzg4o/view) |
-| **Лабораторная №4** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1YHNd0Y_sjlq3ybalrUq4l3QNXz3vzQpK?usp=sharing) |
-| **Лабораторная №5** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/19tv40Fw6gsHQHwHqHQ-EHv6Vxy4z2Wly?usp=sharing) |
+| **Работа №1** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/17oNfADx9kxkyYt_XqbImdvB2H0SMKdbo?usp=sharing#scrollTo=-ZUh6sh2l0Rj) |
+| **Работа №2** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1RblwdOdCFJD3GDIfBngquNyDfqePg-AW?usp=sharing) |
+| **Работа №3** | `до 28.06.26 23:59` | 📄 [Скачать файл задания](https://drive.google.com/file/d/189PsjVcproXNsKoXwFpVSFuNPB6wzg4o/view) |
+| **Работа №4** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1YHNd0Y_sjlq3ybalrUq4l3QNXz3vzQpK?usp=sharing) |
+| **Работа №5** | `до 28.06.26 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/19tv40Fw6gsHQHwHqHQ-EHv6Vxy4z2Wly?usp=sharing) |
