@@ -30,3 +30,4 @@
 ## 📚 Практические работы
 
 * 📝 **[Работа №1](https://docs.google.com/document/d/1p2EmTXVcibFcGPvCs3eiUmPQYBm8dR4aakvY-YEurc0/edit?usp=sharing)** *(от 07.10.26)*
+* 📝 **[Работа №2](https://docs.google.com/document/d/1408bD0Pkt0ckOqeTe822jJxC8yVpvfceXEiTmBKHc6w/edit?usp=sharing)** *(от 14.10.26)*
