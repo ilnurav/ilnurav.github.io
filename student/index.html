@@ -6,17 +6,23 @@
     <title>История сдачи</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
-        input[type="text"] { padding: 10px; width: 100%; margin-bottom: 20px; box-sizing: border-box; }
+        input[type="text"], select { padding: 10px; width: 100%; margin-bottom: 15px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc; }
         table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; font-size: 14px; }
         th { background-color: #2ea44f; color: white; }
         tr:nth-child(even) { background-color: #f9f9f9; }
-        .status-ok { color: green; font-weight: bold; }
     </style>
 </head>
 <body>
     <h2>История сдачи лабораторных работ</h2>
-    <input type="text" id="searchInput" placeholder="Поиск по фамилии..." onkeyup="filterTable()">
+    
+    <select id="groupFilter" onchange="renderTable()">
+        <option value="">-- Все группы --</option>
+        <option value="group1">Группа 101</option>
+        <option value="group2">Группа 102</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Поиск по фамилии..." onkeyup="renderTable()">
     
     <table id="labsTable">
         <thead>
@@ -26,35 +32,39 @@
     </table>
 
     <script>
+        let allData = [];
+
         async function loadData() {
             try {
-                // Добавляем случайный параметр, чтобы браузер не кэшировал старый JSON
                 const response = await fetch('data.json?t=' + Date.now());
-                const data = await response.json();
-                
-                const tbody = document.getElementById('tableBody');
-                // Сортируем так, чтобы новые записи были сверху
-                data.reverse().forEach(row => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${row.date}</td>
-                        <td>${row.student}</td>
-                        <td>${row.lab}</td>
-                        <td class="status-ok">Сдано</td>
-                    `;
-                    tbody.appendChild(tr);
-                });
+                allData = await response.json();
+                renderTable();
             } catch (error) {
-                document.getElementById('tableBody').innerHTML = '<tr><td colspan="4">Ошибка загрузки. Возможно, файл data.json еще не создан.</td></tr>';
+                document.getElementById('tableBody').innerHTML = '<tr><td colspan="4">Ошибка загрузки. Возможно, файл data.json еще пуст.</td></tr>';
             }
         }
 
-        function filterTable() {
-            const filter = document.getElementById("searchInput").value.toLowerCase();
-            const rows = document.querySelectorAll("#labsTable tbody tr");
-            rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(filter) ? "" : "none";
+        function renderTable() {
+            const groupFilter = document.getElementById("groupFilter").value;
+            const textFilter = document.getElementById("searchInput").value.toLowerCase();
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            // Отображаем новые записи сверху
+            allData.slice().reverse().forEach(row => {
+                if (groupFilter && row.group !== groupFilter) return;
+                if (textFilter && !row.student.toLowerCase().includes(textFilter)) return;
+
+                let statusColor = row.status.includes('не доделал') ? 'orange' : 'green';
+                
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.date}</td>
+                    <td>${row.student}</td>
+                    <td>${row.lab}</td>
+                    <td style="color: ${statusColor}; font-weight: bold;">${row.status}</td>
+                `;
+                tbody.appendChild(tr);
             });
         }
 
