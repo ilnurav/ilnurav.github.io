@@ -10,3 +10,4 @@
 2. [Базовые типы данных, операторы, модель памяти, динамическая типизация](lectures/lecture_2.pdf)
 3. [Математические операции, ввод-вывод, форматирование строк (f-строки), приведение и валидация типов](lectures/lecture_3.pdf)
 4. [Управляющие конструкции: if–elif–else, match-case, валидация входных данных](lectures/lecture_4.pdf)
+5. [Циклические конструкции: for, while, break/continue/else, итераторы, range/enumerate/zip](lectures/lecture_5.pdf)
