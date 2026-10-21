@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админка</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 15px; max-width: 500px; margin: auto; }
+        select, input[type="text"], input[type="password"], button { width: 100%; padding: 15px; margin-bottom: 15px; font-size: 16px; box-sizing: border-box; }
+        .student-item { display: flex; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee; font-size: 18px; }
+        .student-item input[type="checkbox"] { width: 25px; height: 25px; margin-right: 15px; }
+        button { background-color: #2ea44f; color: white; border: none; font-weight: bold; border-radius: 5px; cursor: pointer;}
+        .settings { background: #f6f8fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 14px;}
+        #status { text-align: center; font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="settings">
+        <label>GitHub Токен (нужен один раз, сохранится в браузере):</label>
+        <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxx">
+        <button onclick="saveToken()">Сохранить токен</button>
+    </div>
+
+    <h2>Отметка работ</h2>
+    <select id="groupSelect" onchange="showStudents()">
+        <option value="">-- Выберите группу --</option>
+        <option value="group1">Группа 101</option>
+        <option value="group2">Группа 102</option>
+    </select>
+
+    <input type="text" id="labName" placeholder="Название работы (напр. Лаба 1)">
+    <div id="studentsList"></div>
+
+    <button onclick="saveData()">Отправить на GitHub</button>
+    <div id="status"></div>
+
+    <script>
+        // === ВАШИ НАСТРОЙКИ (Впишите свои данные) ===
+        const owner = 'ВАШ_ЛОГИН_GITHUB'; // Например: 'ivanov'
+        const repo = 'students-tracker';  // Название репозитория
+
+        // Списки студентов
+        const db = {
+            "group1": ["Иванов Иван", "Петров Петр"],
+            "group2": ["Алексеев Алексей", "Смирнова Анна"]
+        };
+        // ===========================================
+
+        // Восстанавливаем токен из памяти телефона
+        document.getElementById('ghToken').value = localStorage.getItem('ghToken') || '';
+
+        function saveToken() {
+            localStorage.setItem('ghToken', document.getElementById('ghToken').value);
+            alert('Токен сохранен в памяти устройства!');
+        }
+
+        function showStudents() {
+            const group = document.getElementById('groupSelect').value;
+            const list = document.getElementById('studentsList');
+            list.innerHTML = '';
+            if (db[group]) {
+                db[group].forEach(name => {
+                    list.innerHTML += `<div class="student-item"><input type="checkbox" value="${name}"> <label>${name}</label></div>`;
+                });
+            }
+        }
+
+        // Функции для работы с кириллицей в Base64
+        const utf8ToBase64 = (str) => btoa(unescape(encodeURIComponent(str)));
+        const base64ToUtf8 = (str) => decodeURIComponent(escape(atob(str)));
+
+        async function saveData() {
+            const token = localStorage.getItem('ghToken');
+            const labName = document.getElementById('labName').value;
+            const selected = Array.from(document.querySelectorAll('#studentsList input:checked')).map(cb => cb.value);
+
+            if (!token) return alert('Введите и сохраните GitHub токен!');
+            if (!labName || selected.length === 0) return alert('Заполните название работы и выберите студентов!');
+
+            const status = document.getElementById('status');
+            status.style.color = 'blue';
+            status.innerText = 'Связь с GitHub...';
+
+            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/data.json`;
+
+            try {
+                // 1. Получаем текущий файл
+                let getRes = await fetch(apiUrl, { headers: { 'Authorization': `token ${token}` } });
+                if (!getRes.ok) throw new Error('Не удалось прочитать файл. Проверьте токен и настройки.');
+                let fileData = await getRes.json();
+                
+                // Декодируем текущие данные из Base64
+                let currentData = JSON.parse(base64ToUtf8(fileData.content));
+
+                // 2. Добавляем новые записи
+                const dateStr = new Date().toLocaleDateString('ru-RU');
+                selected.forEach(student => {
+                    currentData.push({ date: dateStr, student: student, lab: labName });
+                });
+
+                // 3. Отправляем обновленный файл обратно
+                let putRes = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `Отмечена ${labName}`,
+                        content: utf8ToBase64(JSON.stringify(currentData, null, 2)),
+                        sha: fileData.sha // Обязательный параметр для обновления
+                    })
+                });
+
+                if (!putRes.ok) throw new Error('Не удалось сохранить изменения.');
+
+                status.style.color = 'green';
+                status.innerText = 'Успешно сохранено на GitHub!';
+                document.querySelectorAll('#studentsList input:checked').forEach(cb => cb.checked = false);
+                setTimeout(() => status.innerText = '', 3000);
+
+            } catch (error) {
+                status.style.color = 'red';
+                status.innerText = error.message;
+            }
+        }
+    </script>
+</body>
+</html>
