@@ -24,10 +24,3 @@
 ---
 
 ## 📚 Лабораторные работы
-
-| № | Дедлайн | Ссылки на задания |
-| :---: | :--- | :--- |
-| **Работа №1** | `до 11.11.25 23:59` | 📄 [Ноутбук 1](https://colab.research.google.com/drive/17oNfADx9kxkyYt_XqbImdvB2H0SMKdbo?usp=sharing) <br> 📄 [Ноутбук 2](https://colab.research.google.com/drive/1NRVPA7vNUBjoSLygmztJes_blcO_WkgL?usp=sharing) |
-| **Работа №2** | `до 25.11.25 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1Nm9TBqEf-RBGxOkrfKt_zPnxn0p812lP?usp=sharing) |
-| **Работа №3** | `до 02.12.25 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1nuicCDEgNa1PbVbih1EZVIYrfSsLijHi?usp=sharing) |
-| **Работа №4** | `до 09.12.25 23:59` | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1sHwMLLwJsiW39gfKhLheqcI7V86qN8F_?usp=sharing) |
