@@ -11,3 +11,4 @@
 3. [Математические операции, ввод-вывод, форматирование строк (f-строки), приведение и валидация типов](lectures/lecture_3.pdf)
 4. [Управляющие конструкции: if–elif–else, match-case, валидация входных данных](lectures/lecture_4.pdf)
 5. [Циклические конструкции: for, while, break/continue/else, итераторы, range/enumerate/zip](lectures/lecture_5.pdf)
+6. [Структуры данных: последовательности — списки, кортежи, срезы, включения](lectures/lecture_6.pdf)
