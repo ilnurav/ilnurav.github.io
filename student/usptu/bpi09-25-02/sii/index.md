@@ -23,4 +23,8 @@
 
 ---
 
-## 📚 Лабораторные работы
+## 📚 Работы
+
+| № | Ссылки на задания |
+| :---: | :--- |
+| **Работа №1** | 📄 [Ноутбук 1](https://colab.research.google.com/drive/17oNfADx9kxkyYt_XqbImdvB2H0SMKdbo?usp=sharing) <br> 📄 [Ноутбук 2](https://colab.research.google.com/drive/1NRVPA7vNUBjoSLygmztJes_blcO_WkgL?usp=sharing) |
