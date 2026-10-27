@@ -20,3 +20,11 @@
 - 📔 **Лекция 3:** [Ноутбук](https://colab.research.google.com/drive/1drVEKN7t4cJo2dnyNze8UqUT_WXBJul6?usp=sharing)
 - 📔 **Лекция 4:** [Ноутбук 1](https://colab.research.google.com/drive/1SfJ4csCNqln7IgMl-Y9he9UYAOCTBfYD?usp=sharing) | [Ноутбук 2](https://colab.research.google.com/drive/1SfpbC2Y7oHXScwyCOTNzEvpUPZGWjNmL?usp=sharing) | [Ноутбук 3](https://colab.research.google.com/drive/1T3xBTLrt3YNfftirklneqPBDH8rO49Sv?usp=sharing) | [Ноутбук 4](https://colab.research.google.com/drive/1kVyoouAmDByLZRF78msVMg-zsurATkGn?usp=sharing)
 - 📔 **Лекция 5:** [Ноутбук](https://colab.research.google.com/drive/1Xkg5FgOw1b96KDzey5hTVyu-DPDS2Ikd?usp=sharing)
+
+---
+
+## 📚 Работы
+
+| № | Ссылки на задания |
+| :---: | :--- |
+| **Работа №1** | 📄 [Ноутбук 1](https://colab.research.google.com/drive/17oNfADx9kxkyYt_XqbImdvB2H0SMKdbo?usp=sharing) <br> 📄 [Ноутбук 2](https://colab.research.google.com/drive/1NRVPA7vNUBjoSLygmztJes_blcO_WkgL?usp=sharing) |
