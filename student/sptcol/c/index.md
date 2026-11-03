@@ -26,7 +26,7 @@
 - 📊 **[Учет принятых работ](https://docs.google.com/spreadsheets/d/1GVyNhuwIuZB1y8FGLt99HDXhdgXtwNALRiy7avP26no/edit?usp=sharing)**
 - 📊 **[Таблица посещаемости и активности на занятиях](https://docs.google.com/spreadsheets/d/1PRCzx1X3x9G_O779gaB_-rkQGnIPGak8K7PGVRN9ULg/edit?usp=sharing)**
 - 📹 **[Постоянная ссылка на занятия](https://telemost.yandex.ru/j/68974219809865)** *(на время пока платформа не работает)*
-- ☁️ **[Облако с записями занятий](https://disk.yandex.ru/d/Dbfgaz0Fs4bIPQ)**
+- ☁️ **[Облако с записями занятий](https://disk.yandex.ru/d/Dbfgaz0Fs4bIPQ)** *(на время пока платформа не работает)*
 - 📓 **[Материалы занятия от 02.11.2026 (Colab)](https://colab.research.google.com/drive/1ETQXLL5r900ODgonxbambZgf5eVR41oG?usp=sharing)**
 
 ---
