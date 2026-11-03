@@ -25,11 +25,15 @@
 - 📤 **[Сдать работу](https://forms.gle/cXmsAwGQzokUvXRt7)**
 - 📊 **[Учет принятых работ](https://docs.google.com/spreadsheets/d/1GVyNhuwIuZB1y8FGLt99HDXhdgXtwNALRiy7avP26no/edit?usp=sharing)**
 - 📊 **[Таблица посещаемости и активности на занятиях](https://docs.google.com/spreadsheets/d/1PRCzx1X3x9G_O779gaB_-rkQGnIPGak8K7PGVRN9ULg/edit?usp=sharing)**
+- 📹 **[Постоянная ссылка на занятия](https://telemost.yandex.ru/j/68974219809865)** *(на время пока платформа не работает)*
+- ☁️ **[Облако с записями занятий](https://disk.yandex.ru/d/Dbfgaz0Fs4bIPQ)**
+- 📓 **[Материалы занятия от 02.11.2026 (Colab)](https://colab.research.google.com/drive/1ETQXLL5r900ODgonxbambZgf5eVR41oG?usp=sharing)**
 
 ---
 ## 📚 Практические работы
 
-* 📝 **[Работа №1](https://docs.google.com/document/d/1p2EmTXVcibFcGPvCs3eiUmPQYBm8dR4aakvY-YEurc0/edit?usp=sharing)** *(от 07.10.26)*
-* 📝 **[Работа №2](https://docs.google.com/document/d/1408bD0Pkt0ckOqeTe822jJxC8yVpvfceXEiTmBKHc6w/edit?usp=sharing)** *(от 14.10.26)*
-* 📝 **[Работа №3](https://docs.google.com/document/d/1SIFkgzgF0AK_2zalpEONAcH4E9QaaD-j9lE2xGwDYHs/edit?usp=sharing)** *(от 21.10.26)*
-* 📝 **[Работа №4](https://docs.google.com/document/d/1RXxuZ2ku4oZCrTnRxMhxF34tO0lm8fNIXAHvTc76T9M/edit?usp=sharing)** *(от 28.10.26)*
+- 📝 **[Работа №1](https://docs.google.com/document/d/1p2EmTXVcibFcGPvCs3eiUmPQYBm8dR4aakvY-YEurc0/edit?usp=sharing)** *(от 07.10.26)*
+- 📝 **[Работа №2](https://docs.google.com/document/d/1408bD0Pkt0ckOqeTe822jJxC8yVpvfceXEiTmBKHc6w/edit?usp=sharing)** *(от 14.10.26)*
+- 📝 **[Работа №3](https://docs.google.com/document/d/1SIFkgzgF0AK_2zalpEONAcH4E9QaaD-j9lE2xGwDYHs/edit?usp=sharing)** *(от 21.10.26)*
+- 📝 **[Работа №4](https://docs.google.com/document/d/1RXxuZ2ku4oZCrTnRxMhxF34tO0lm8fNIXAHvTc76T9M/edit?usp=sharing)** *(от 28.10.26)*
+- 📝 **[Работа №5](https://docs.google.com/document/d/1EMPSQ7xrJWbjfybpO5svuyeVDJo1Q9YJRf9eRgMnc1I/edit?usp=sharing)** *(от 02.11.26)*
