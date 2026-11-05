@@ -8,8 +8,8 @@
 
 ## 🔗 Основные ссылки и инструкции
 
-- 📤 **[Форма для сдачи работ]()**
-- 📊 **[Таблица учета работ]()**
+- 📤 **[Форма для сдачи работ](https://forms.gle/Y4HTE3rG897GYqoX7)**
+- 📊 **[Таблица учета работ](https://docs.google.com/spreadsheets/d/14Z8MRH6f2I7KgzU7ogonram4datWxm6-xa3P2Gc-rmw/edit?usp=sharing)**
 
 **Обучающие материалы:**
 - 📺 [Как работать с Google Colab](https://www.youtube.com/watch?v=UenbX_7qYeI)
