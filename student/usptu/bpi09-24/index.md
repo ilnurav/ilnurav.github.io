@@ -1,4 +1,4 @@
-# 🧠 Нейросетевые технологии (БПИ09-25)
+# 🧠 Нейросетевые технологии (БПИ09-24)
 
 **Преподаватель:** Ахметов Ильнур Вазирович  
 📧 **Email:** [ilnurakhmetov@gmail.com](mailto:ilnurakhmetov@gmail.com)  
@@ -8,8 +8,8 @@
 
 ## 🔗 Основные ссылки и инструкции
 
-- 📤 **[Форма для сдачи работ](https://forms.gle/1jQSDNKrXkb3w9iV8)**
-- 📊 **[Таблица учета работ](https://docs.google.com/spreadsheets/d/14dHWcB6oTJaA3WujAR3VMLFXYVgxX7TQ5wTCtmWP6B8/edit?usp=sharing)**
+- 📤 **[Форма для сдачи работ]()**
+- 📊 **[Таблица учета работ]()**
 
 **Обучающие материалы:**
 - 📺 [Как работать с Google Colab](https://www.youtube.com/watch?v=UenbX_7qYeI)
