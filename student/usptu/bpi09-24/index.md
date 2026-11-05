@@ -46,4 +46,4 @@
 
 | № | Ссылки на задания |
 | :---: | :--- |
-
+| Работа №1 | 📄 [Открыть задание (Google Colab)](https://colab.research.google.com/drive/1mnKl0D7qor33uu2BOLmAjNkvmOQ87Xdn?usp=sharing) |
