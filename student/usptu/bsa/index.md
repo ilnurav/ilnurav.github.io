@@ -24,7 +24,7 @@
 
 ## 📚 Вопросы по Python
 
-[Вопросы по Python](https://ilnurav.github.io/student/usptu/bsa/python/))
+[Вопросы по Python](https://ilnurav.github.io/student/usptu/bsa/python/)
 
 ---
 
