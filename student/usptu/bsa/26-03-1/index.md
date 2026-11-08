@@ -23,3 +23,9 @@
 | :-: | :--- | :-: |
 | **01** | Практическая работа №1 | [📄 Открыть PDF](../labs/pract_1.pdf) |
 | **02** | Практическая работа №2 | [📄 Открыть PDF](../labs/pract_2.pdf) |
+
+---
+
+## 📚 Вопросы по Python
+
+[Вопросы по Python](https://ilnurav.github.io/student/usptu/bsa/python/)
