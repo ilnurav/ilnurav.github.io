@@ -40,4 +40,4 @@
 | **Работа №3** | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1A89f5HHyBZnQXi0VzU-lsUY0z_vg8bHV?usp=sharing) |
 | **Работа №4** | 📄 [Открыть документ с заданием](https://docs.google.com/document/d/1xpuzjqQeB8tIov1EPGvhXsdJckuYD1H6A65mbgqbqOk/edit?usp=sharing) |
 | **Работа №5** | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1rDcDtqBfG34b2vu8x9n3nR-BBJtRbr4d?usp=sharing) |
-| **Работа №6** | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1BBuds3Wt1bFArOdh0ty7RpYs_RpVkrUI?usp=sharing) |
+| **Работа №6** | 📄 [Открыть ноутбук Colab](https://colab.research.google.com/drive/1K6RKH-2yUUaMme7Xh6uaL-c5VQ4RSFWd?usp=sharing) |
