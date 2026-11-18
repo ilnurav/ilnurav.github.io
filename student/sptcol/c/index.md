@@ -38,3 +38,4 @@
 - 📝 **[Работа №4](https://docs.google.com/document/d/1RXxuZ2ku4oZCrTnRxMhxF34tO0lm8fNIXAHvTc76T9M/edit?usp=sharing)** *(от 28.10.26)*
 - 📝 **[Работа №5](https://docs.google.com/document/d/1EMPSQ7xrJWbjfybpO5svuyeVDJo1Q9YJRf9eRgMnc1I/edit?usp=sharing)** *(от 02.11.26)*
 - 📝 **[Работа №6](https://docs.google.com/document/d/15k6B8tsk18SkRvyjbkDNUuQ-b3Z0LnyoDafkbaJdUU0/edit?usp=sharing)** *(от 11.11.26)*
+- 📝 **[Работа №7](https://docs.google.com/document/d/1YWfnAYUra5Y2eH20PGrDeFv42sgxLUu7syixGRoXulw/edit?usp=sharing)** *(от 19.11.26)*
