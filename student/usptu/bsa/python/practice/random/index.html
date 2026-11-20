@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор вариантов задач по программированию</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Card animation keyframes */
+    @keyframes cardUpdate {
+      0% { transform: scale(0.98); opacity: 0.6; }
+      50% { transform: scale(1.01); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .animate-update {
+      animation: cardUpdate 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    @keyframes spinOnce {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .spin-anim {
+      animation: spinOnce 0.4s ease-in-out;
+    }
+
+    /* Custom print styles */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-area {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+      .card-print {
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 1.25rem !important;
+        background: #ffffff !important;
+      }
+      .print-header {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 antialiased min-h-full flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl border border-slate-700">
+    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+    </svg>
+    <span id="toast-message" class="text-sm font-medium">Вариант скопирован в буфер обмена!</span>
+  </div>
+
+  <div class="max-w-6xl w-full mx-auto px-4 py-6 sm:px-6 lg:px-8 flex-grow">
+    
+    <!-- Printable Only Header -->
+    <div class="hidden print-header">
+      <div class="flex justify-between items-end">
+        <div>
+          <h1 class="text-2xl font-bold text-black">Вариант контрольных задач по программированию</h1>
+          <p class="text-sm text-slate-600 mt-1">Сгенерировано: <span id="print-date"></span></p>
+        </div>
+        <div class="text-right">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Код варианта</span>
+          <div id="print-variant-code" class="text-base font-mono font-bold text-black">#VAR-000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Web Header -->
+    <header class="no-print bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 mb-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-100">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              Crypto-random CryptoRNG
+            </span>
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
+              <span id="total-combinations-badge">6 174</span> комбинации
+            </span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Генератор вариантов задач
+          </h1>
+          <p class="text-slate-500 text-sm mt-1">
+            Честный случайный выбор по 1 задаче из 4 ключевых разделов программирования.
+          </p>
+        </div>
+
+        <!-- Header Action Controls -->
+        <div class="flex flex-wrap items-center gap-3">
+          <button id="btn-generate-all" onclick="generateNewVariant()" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-semibold text-sm shadow-sm transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            <span>Сгенерировать вариант</span>
+          </button>
+
+          <button id="btn-copy" onclick="copyVariantToClipboard()" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 active:bg-slate-100 text-slate-700 font-semibold text-sm shadow-sm transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-slate-300">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+            </svg>
+            <span class="hidden sm:inline">Скопировать</span>
+          </button>
+
+          <button id="btn-print" onclick="window.print()" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 active:bg-slate-100 text-slate-700 font-semibold text-sm shadow-sm transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-slate-300">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+            </svg>
+            <span class="hidden sm:inline">Печать</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cards Grid -->
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-6 print-area">
+      <!-- Section Cards will be rendered here dynamically -->
+      <div id="cards-container" class="contents"></div>
+    </main>
+
+    <!-- Compact History & Info Panel -->
+    <section class="no-print mt-10 bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm">
+      <div class="flex items-center justify-between cursor-pointer select-none" onclick="toggleHistory()">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-800">История сгенерированных вариантов</h3>
+            <p class="text-xs text-slate-500">Всего сгенерировано: <span id="generation-counter" class="font-medium text-slate-700">0</span></p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-400 hidden sm:inline">Нажмите, чтобы развернуть</span>
+          <svg id="history-chevron" class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div id="history-content" class="hidden mt-4 pt-4 border-t border-slate-100">
+        <div id="history-list" class="space-y-2 max-h-48 overflow-y-auto pr-1 text-xs font-mono text-slate-600">
+          <p class="text-slate-400 italic font-sans text-xs">История пока пуста. Сгенерируйте варианты!</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="no-print py-6 text-center text-xs text-slate-400 border-t border-slate-200/60 mt-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>Сборник контрольных практических задач по программированию</p>
+      <p>Используется неравномерно-несмещенный алгоритм <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-600">crypto.getRandomValues</code></p>
+    </div>
+  </footer>
+
+  <script>
+    // Data Structure containing exact user task texts
+    const SECTIONS_DATA = [
+      {
+        id: 1,
+        title: "Арифметика и линейные алгоритмы",
+        tasks: [
+          "Дано натуральное число. Выведите его последнюю цифру.",
+          "Длина Московской кольцевой автомобильной дороги — 109 километров. Байкер Вася стартует с нулевого километра МКАД и едет со скоростью v километров в час. На какой отметке он остановится через t часов?",
+          "Дано положительное действительное число X. Выведите его дробную часть.",
+          "За день машина проезжает n километров. Сколько дней нужно, чтобы проехать маршрут длиной m километров? Программа получает на вход числа n и m.",
+          "Пирожок в столовой стоит a рублей и b копеек. Определите, сколько рублей и копеек нужно заплатить за n пирожков. Программа получает на вход три числа: a, b, n, и должна вывести два числа: стоимость покупки в рублях и копейках.",
+          "Даны значения двух моментов времени, принадлежащих одним и тем же суткам: часы, минуты и секунды для каждого из моментов времени. Известно, что второй момент времени наступил не раньше первого. Определите, сколько секунд прошло между двумя моментами времени. Программа на вход получает три целых числа: часы, минуты, секунды, задающие первый момент времени и три целых числа, задающих второй момент времени. Выведите число секунд между этими моментами времени.",
+          "Дано трехзначное число. Найдите сумму его цифр."
+        ]
+      },
+      {
+        id: 2,
+        title: "Циклы",
+        tasks: [
+          'Выведите на экран 10 раз фразу "You are welcome!".',
+          'Выведите на экран n раз фразу "Silence is golden". Число n вводит пользователь.',
+          "Выведите на экран прямоугольник из нулей. Количество строк вводит пользователь, количество столбцов равно 5.",
+          "Вывести на экран фигуру из звездочек: квадрат из n строк, в каждой строке n звездочек.",
+          "Выведите на экран числа 1, 2, 3, 4, ..., 20.",
+          "Вывести на экран ряд чисел 1001, 1004, 1007, ..., 1025.",
+          "Вывести на экран числа 100, 96, 92, ... до последнего положительного включительно.",
+          "Выведите на экран числа 1.2, 1.4, 1.6, ..., 2.8.",
+          "Вывести на экран числа от 1000 до 9999 такие, что все цифры различны.",
+          "Вывести на экран числа от 1000 до 9999 такие, что среди цифр нет цифр 5 и цифры 6.",
+          "Вывести все пятизначные числа, которые делятся на 2, у которых средняя цифра нечетная, и сумма всех цифр делится на 4.",
+          "Вывести на экран числа от 1000 до 9999 такие, что среди цифр есть цифра 3.",
+          "Найдите трехзначные числа, равные сумме кубов своих цифр.",
+          "Сколько существует четырехзначных чисел, которые в 600 раз больше суммы своих цифр?"
+        ]
+      },
+      {
+        id: 3,
+        title: "Строки и обработка текста",
+        tasks: [
+          "В заданном предложении найти пару слов, из которых одно является обращением другого (обращение – слово, получающееся из исходного записью его букв в обратном порядке).",
+          "Дан email в строке. Определить, является ли он корректным (наличие символа @ и точки, наличие не менее двух символов после последней точки и т.д.).",
+          "Дана строка. Определите, является ли она действительным числом.",
+          'Удалите в строке все символы "!".',
+          "Дана строка, содержащая полное имя файла (например, 'c:\\WebServers\\home\\testsite\\www\\myfile.txt'). Выделите из этой строки имя файла без расширения.",
+          "Дан текст. Заменить все цифры соответствующими словами.",
+          "Дано натуральное число. Получить строку, в которой тройки цифр этого числа разделены пробелом, начиная с правого конца. Например, число 1234567 преобразуется в 1 234 567."
+        ]
+      },
+      {
+        id: 4,
+        title: "Массивы (списки)",
+        tasks: [
+          "В массиве заменить все числа, большие данного числа, на среднее арифметическое всех чисел массива.",
+          "Дан массив. Заменить все числа, меньшие последнего элемента массива, на первый элемент.",
+          "Поменять местами наибольший и наименьший элементы массива.",
+          "Определить, содержит ли массив данное число x.",
+          "Найти количество четных чисел в массиве.",
+          "Найти количество чисел в массиве, которые делятся на 3, но не делятся на 7.",
+          "Определите, каких чисел в массиве больше: которые делятся на первый элемент массива или которые делятся на последний элемент массива.",
+          "Найдите сумму и произведение элементов массива.",
+          "Найдите сумму четных чисел массива."
+        ]
+      }
+    ];
+
+    // State Variables
+    let currentVariant = [0, 0, 0, 0]; // 0-indexed selected task per section
+    let totalGenerations = 0;
+    const historyLog = [];
+
+    /**
+     * Unbiased random integer generator in [0, max - 1] using rejection sampling with window.crypto
+     */
+    function getRandomInt(max) {
+      if (max <= 1) return 0;
+      const maxUint = 0xFFFFFFFF; // 2^32 - 1
+      const limit = maxUint - (maxUint % max);
+      const uintArray = new Uint32Array(1);
+      
+      let rand;
+      do {
+        window.crypto.getRandomValues(uintArray);
+        rand = uintArray[0];
+      } while (rand >= limit);
+
+      return rand % max;
+    }
+
+    /**
+     * Generate new selection for all 4 sections
+     */
+    function generateNewVariant() {
+      const newIndices = [];
+      SECTIONS_DATA.forEach((sec, idx) => {
+        newIndices.push(getRandomInt(sec.tasks.length));
+      });
+
+      currentVariant = newIndices;
+      totalGenerations++;
+
+      // Log into history
+      logToHistory(newIndices);
+
+      // Render cards with animation
+      renderCards(true);
+      updateStats();
+    }
+
+    /**
+     * Single card resample (Guarantees choosing a different task if section has > 1 task)
+     */
+    function resampleSingleCard(sectionIndex) {
+      const tasksCount = SECTIONS_DATA[sectionIndex].tasks.length;
+      if (tasksCount <= 1) return;
+
+      const currentIdx = currentVariant[sectionIndex];
+      let nextIdx;
+      do {
+        nextIdx = getRandomInt(tasksCount);
+      } while (nextIdx === currentIdx);
+
+      currentVariant[sectionIndex] = nextIdx;
+      totalGenerations++;
+
+      // Update card UI specific animation
+      const cardEl = document.getElementById(`card-sec-${sectionIndex}`);
+      const btnIcon = document.getElementById(`btn-icon-${sectionIndex}`);
+
+      if (btnIcon) {
+        btnIcon.classList.remove("spin-anim");
+        void btnIcon.offsetWidth; // trigger reflow
+        btnIcon.classList.add("spin-anim");
+      }
+
+      if (cardEl) {
+        cardEl.classList.remove("animate-update");
+        void cardEl.offsetWidth; // trigger reflow
+        cardEl.classList.add("animate-update");
+      }
+
+      updateCardContent(sectionIndex);
+      updateStats();
+    }
+
+    /**
+     * Render or update all card elements in container
+     */
+    function renderCards(animateAll = false) {
+      const container = document.getElementById("cards-container");
+      container.innerHTML = "";
+
+      SECTIONS_DATA.forEach((section, idx) => {
+        const selectedTaskIdx = currentVariant[idx];
+        const taskText = section.tasks[selectedTaskIdx];
+        const taskNumber = selectedTaskIdx + 1;
+        const totalTasks = section.tasks.length;
+
+        const card = document.createElement("div");
+        card.id = `card-sec-${idx}`;
+        card.className = `card-print bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:border-slate-300 transition-all duration-200 ${animateAll ? 'animate-update' : ''}`;
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <span class="inline-block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Раздел ${section.id}</span>
+                <h2 class="text-base font-bold text-slate-900">${section.title}</h2>
+              </div>
+              <div class="flex items-center gap-2">
+                <span id="badge-task-${idx}" class="no-print inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
+                  Задача #${taskNumber} из ${totalTasks}
+                </span>
+                <button 
+                  onclick="resampleSingleCard(${idx})" 
+                  title="Заменить задачу в этом разделе"
+                  aria-label="Заменить задачу в разделе ${section.title}"
+                  class="no-print p-2 rounded-lg bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-slate-600 transition-colors border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                  <svg id="btn-icon-${idx}" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Printable task number format -->
+            <div class="hidden print:block font-bold text-sm text-slate-700 mb-1">
+              Задача №${section.id} (Раздел: ${section.title}):
+            </div>
+
+            <div id="text-task-${idx}" class="text-slate-700 text-sm leading-relaxed bg-slate-50/80 print:bg-transparent p-4 print:p-0 rounded-xl border border-slate-100 print:border-none font-normal">
+              ${escapeHtml(taskText)}
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    /**
+     * Partial DOM update for a specific card
+     */
+    function updateCardContent(secIdx) {
+      const selectedTaskIdx = currentVariant[secIdx];
+      const section = SECTIONS_DATA[secIdx];
+      const taskText = section.tasks[selectedTaskIdx];
+      const taskNumber = selectedTaskIdx + 1;
+
+      const badge = document.getElementById(`badge-task-${secIdx}`);
+      const textContainer = document.getElementById(`text-task-${secIdx}`);
+
+      if (badge) badge.innerText = `Задача #${taskNumber} из ${section.tasks.length}`;
+      if (textContainer) textContainer.innerText = taskText;
+    }
+
+    /**
+     * Update generation counter and code badges
+     */
+    function updateStats() {
+      const counterEl = document.getElementById("generation-counter");
+      if (counterEl) counterEl.innerText = totalGenerations;
+
+      // Update printable code & date
+      const printCode = document.getElementById("print-variant-code");
+      const printDate = document.getElementById("print-date");
+
+      const codeStr = `#VAR-${currentVariant.map(i => i + 1).join('-')}`;
+      if (printCode) printCode.innerText = codeStr;
+      if (printDate) printDate.innerText = new Date().toLocaleString("ru-RU");
+    }
+
+    /**
+     * Copy current variant text to Clipboard
+     */
+    function copyVariantToClipboard() {
+      const codeStr = `VAR-${currentVariant.map(i => i + 1).join('-')}`;
+      let textToCopy = `ВАРИАНТ ЗАДАЧ ПО ПРОГРАММИРОВАНИЮ [${codeStr}]\n`;
+      textToCopy += `----------------------------------------\n\n`;
+
+      SECTIONS_DATA.forEach((sec, idx) => {
+        const taskNum = currentVariant[idx] + 1;
+        textToCopy += `Раздел ${sec.id}. ${sec.title} (Задача #${taskNum}):\n`;
+        textToCopy += `${sec.tasks[currentVariant[idx]]}\n\n`;
+      });
+
+      // Fallback & Modern Clipboard API implementation
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast("Вариант скопирован в буфер обмена!");
+        }).catch(() => {
+          fallbackExecCommandCopy(textToCopy);
+        });
+      } else {
+        fallbackExecCommandCopy(textToCopy);
+      }
+    }
+
+    function fallbackExecCommandCopy(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast("Вариант скопирован в буфер обмена!");
+      } catch (err) {
+        showToast("Не удалось скопировать текст");
+      }
+      document.body.removeChild(textArea);
+    }
+
+    /**
+     * Toast notification popup
+     */
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toast-message");
+      if (!toast || !toastMsg) return;
+
+      toastMsg.innerText = msg;
+      toast.classList.remove("translate-y-20", "opacity-0");
+      toast.classList.add("translate-y-0", "opacity-100");
+
+      setTimeout(() => {
+        toast.classList.remove("translate-y-0", "opacity-100");
+        toast.classList.add("translate-y-20", "opacity-0");
+      }, 2600);
+    }
+
+    /**
+     * History drawer toggle
+     */
+    function toggleHistory() {
+      const content = document.getElementById("history-content");
+      const chevron = document.getElementById("history-chevron");
+      if (!content || !chevron) return;
+
+      content.classList.toggle("hidden");
+      chevron.classList.toggle("rotate-180");
+    }
+
+    /**
+     * Append generated variant to history log
+     */
+    function logToHistory(variantIndices) {
+      const timeStr = new Date().toLocaleTimeString("ru-RU", { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const indicesStr = variantIndices.map((v, idx) => `Р${idx+1}:#${v+1}`).join(" | ");
+
+      historyLog.unshift({ time: timeStr, code: indicesStr, indices: [...variantIndices] });
+
+      const listContainer = document.getElementById("history-list");
+      if (!listContainer) return;
+
+      listContainer.innerHTML = historyLog.map((item, index) => `
+        <div class="flex items-center justify-between p-2 rounded hover:bg-slate-50 transition-colors">
+          <span><strong class="text-slate-800">#${totalGenerations - index}</strong> [${item.time}] — ${item.code}</span>
+          <button onclick="restoreVariant([${item.indices.join(',')}])" class="text-brand-600 hover:underline font-sans text-xs">Загрузить</button>
+        </div>
+      `).join("");
+    }
+
+    /**
+     * Restore a variant from history
+     */
+    function restoreVariant(indices) {
+      currentVariant = [...indices];
+      renderCards(true);
+      updateStats();
+      showToast("Вариант загружен из истории");
+    }
+
+    /**
+     * Helper to escape HTML tags
+     */
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Initialize on window load
+    window.addEventListener("load", () => {
+      // Auto-generate initial random variant
+      generateNewVariant();
+    });
+  </script>
+</body>
+</html>
