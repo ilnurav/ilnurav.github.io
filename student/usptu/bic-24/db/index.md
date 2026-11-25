@@ -30,3 +30,4 @@
 | **Работа №1** | 📄 [Документ с заданием](https://docs.google.com/document/d/17L_5TMaNWDMjeLIWiLKNAaqeLDmOqOQ9J2_ILf0zh3U/edit?usp=sharing) |
 | **Работа №2** | 📄 [Документ с заданием](https://docs.google.com/document/d/1-eknVrYFxacEWCRyVXvA5xRcb5KdrnpEOlUGpewhiYA/edit?usp=sharing) |
 | **Работа №3** | 📄 [Документ с заданием](https://docs.google.com/document/d/121SIXHvT9PXWwV9i-9kRYvt0hV2WpcAVGFWYAmcGEFM/edit?usp=sharing) |
+| **Работа №4** | 📄 [Документ с заданием](https://docs.google.com/document/d/1IXc2JuuDoxaYexkBfOaKMfKkolDP1pLkEUO8FrN3K6I/edit?usp=sharing) |
